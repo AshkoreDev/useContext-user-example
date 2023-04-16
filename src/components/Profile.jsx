@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import UserContext from './../context/User/UserContext.jsx';
 
-const Profile = () => {
+function Profile() {
 
 	const { selectedUser } = useContext(UserContext);
 	
@@ -9,8 +9,8 @@ const Profile = () => {
 
 		<>
 			{
-				selectedUser
-				? (<div className="card card-body text-center">
+				(selectedUser)
+				? <div className="card card-body text-center">
 				  	<img 
 				  		src={selectedUser.avatar} 
 				  		alt={`${selectedUser.first_name} photo`} 
@@ -20,11 +20,11 @@ const Profile = () => {
 
 				  	<h2 className="fw-bold mt-2">{`${selectedUser.first_name} ${selectedUser.last_name}`}</h2>
 
-				  	<h5 className="fw-bold">Email: {" "} 
+				  	<h3 className="fw-bold">Email: {" "} 
 				  		<span className="fw-normal">{selectedUser.email}</span>
-				  	</h5>
-				  </div>)
-				: (<h2 className="">No user selected.</h2>)
+				  	</h3>
+				  </div>
+				: <h3 className="text-center">No user selected</h3>
 			}
 		</>
 

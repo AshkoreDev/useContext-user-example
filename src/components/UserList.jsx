@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import UserContext from './../context/User/UserContext.jsx';
 
-const UserList = () => {
+function UserList() {
 
 	const { users, getUsers, getProfile } = useContext(UserContext);
 
@@ -23,8 +23,8 @@ const UserList = () => {
 							key={user.id} 
 							href="#!" 
 							className="list-group-item list-group-action d-flex justify-content-start align-items-center" 
-							onClick={() =>  getProfile(user.id)}>
-							<img src={user.avatar} alt={`${user.first_name} photo`} className="img-fluid rounded-circle" width="70" height="70" />
+							onClick={() => getProfile(user.id)}>
+							<img src={user.avatar} alt={`${user.first_name} photo`} className="img-fluid rounded-circle" width="70" height="70"/>
 							<p className="my-0 mx-4">{`${user.first_name} ${user.last_name}`}</p>
 						</a>
 
