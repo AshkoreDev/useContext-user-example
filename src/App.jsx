@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Profile from './components/Profile.jsx';
 import UserList from './components/UserList.jsx';
